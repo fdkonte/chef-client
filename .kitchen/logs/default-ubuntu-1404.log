@@ -1,0 +1,69 @@
+I, [2016-06-25T11:26:50.611173 #19504]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
+I, [2016-06-25T11:26:50.694239 #19504]  INFO -- default-ubuntu-1404: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+E, [2016-06-25T11:26:50.695217 #19504] ERROR -- default-ubuntu-1404: Create failed on instance <default-ubuntu-1404>.
+E, [2016-06-25T11:26:50.695217 #19504] ERROR -- default-ubuntu-1404: ------Exception-------
+E, [2016-06-25T11:26:50.695217 #19504] ERROR -- default-ubuntu-1404: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2016-06-25T11:26:50.695217 #19504] ERROR -- default-ubuntu-1404: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . returned 1
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: ----------------------
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/driver/ssh_base.rb:363:in `run_command'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:138:in `docker_command'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:283:in `build_image'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:106:in `create'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.696194 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: ----End Backtrace-----
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: ---Nested Exception---
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . returned 1
+E, [2016-06-25T11:26:50.697171 #19504] ERROR -- default-ubuntu-1404: ----------------------
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/driver/ssh_base.rb:363:in `run_command'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:138:in `docker_command'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:283:in `build_image'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:106:in `create'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-25T11:26:50.698148 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-25T11:26:50.699126 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-25T11:26:50.699126 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-25T11:26:50.699126 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-06-25T11:26:50.699126 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-06-25T11:26:50.699126 #19504] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-06-25T11:26:50.699126 #19504] ERROR -- default-ubuntu-1404: ----End Backtrace-----

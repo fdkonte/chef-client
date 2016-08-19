@@ -1,0 +1,2 @@
+---
+ssh_key: C:/v-chef-repo/cookbooks/chef-client/.kitchen/docker_id_rsa

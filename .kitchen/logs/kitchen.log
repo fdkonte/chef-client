@@ -1,0 +1,170 @@
+I, [2016-06-25T11:26:50.279888 #19504]  INFO -- Kitchen: -----> Starting Kitchen (v1.10.0)
+I, [2016-06-25T11:26:50.611173 #19504]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+I, [2016-06-25T11:26:50.700103 #19504]  INFO -- Kitchen: -----> Creating <default-centos-72>...
+E, [2016-06-25T11:26:50.843757 #19504] ERROR -- Kitchen: ------Exception-------
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: Message: 2 actions failed.
+>>>>>>     Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . returned 1] on default-ubuntu-1404
+>>>>>>     Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . returned 1] on default-centos-72
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: ----------------------
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:187:in `report_errors'
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:178:in `run_action'
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command/action.rb:39:in `block in call'
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command/action.rb:37:in `call'
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-06-25T11:26:50.845711 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/cli.rb:184:in `block (2 levels) in <class:CLI>'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/cli.rb:325:in `invoke_task'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/errors.rb:174:in `with_friendly_errors'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/bin/kitchen:13:in `<top (required)>'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/bin/kitchen:22:in `load'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/bin/kitchen:22:in `<main>'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: -Composite Exception--
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . returned 1] on default-ubuntu-1404
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: ----------------------
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-06-25T11:26:50.846689 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/driver/ssh_base.rb:363:in `run_command'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:138:in `docker_command'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:283:in `build_image'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:106:in `create'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-25T11:26:50.847666 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: ---Nested Exception---
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-zsa0ff . returned 1]
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: ----------------------
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/driver/ssh_base.rb:363:in `run_command'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:138:in `docker_command'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:283:in `build_image'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:106:in `create'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-25T11:26:50.848643 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: -Composite Exception--
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . returned 1] on default-centos-72
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: ----------------------
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/driver/ssh_base.rb:363:in `run_command'
+E, [2016-06-25T11:26:50.849621 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:138:in `docker_command'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:283:in `build_image'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:106:in `create'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-06-25T11:26:50.850598 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: ---Nested Exception---
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . ----
+STDOUT: 
+STDERR: Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+---- End output of docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . ----
+Ran docker -H unix:///var/run/docker.sock build -f C:/v-chef-repo/cookbooks/chef-client/Dockerfile-kitchen20160625-19504-7k3lkq . returned 1]
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: ----------------------
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/driver/ssh_base.rb:363:in `run_command'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:138:in `docker_command'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:283:in `build_image'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/Users/Jack/AppData/Local/chefdk/gem/ruby/2.1.0/gems/kitchen-docker-2.4.0/lib/kitchen/driver/docker.rb:106:in `create'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-25T11:26:50.851575 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-06-25T11:26:50.852552 #19504] ERROR -- Kitchen: ----End Backtrace-----
